@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sam Hartmann's games page">
+    <link rel="stylesheet" href="./assets/styles.css">
+    <title>Games - Samuel Hartmann</title>
+</head>
+
+<body>
+    <header>
+        <h1>Samuel Hartmann</h1>
+        <nav class="main-nav">
+            <a href="./index.html">Home</a>
+            <a href="./games.html" aria-current="page">Games</a>
+        </nav>
+    </header>
+
+    <main class="games-main">
+        <aside class="game-list" aria-label="Game list">
+            <h2>Games</h2>
+            <ul>
+                <li><button class="game-btn" data-game="chomp">Chomp</button></li>
+                <!-- future games can be added here -->
+            </ul>
+        </aside>
+
+        <section class="game-area" id="game-area">
+            <div class="game-placeholder">
+                <p>Select a game from the left to start playing.</p>
+            </div>
+
+            <div class="game-ui hidden" id="collectathon-ui">
+                <div class="game-header">
+                    <h2>Chomp</h2>
+                    <div class="controls">
+                        <button id="restart-btn">Restart</button>
+                    </div>
+                </div>
+                <div class="game-frame">
+                    <div class="counter" id="collect-count">Collected: 0</div>
+                    <canvas id="collect-canvas" width="800" height="500" tabindex="0"></canvas>
+                    <div class="touch-controls" id="touch-controls">
+                        <button class="touch-btn" data-dir="up" aria-label="Up">▲</button>
+                        <div>
+                            <button class="touch-btn" data-dir="left" aria-label="Left">◀</button>
+                            <button class="touch-btn" data-dir="down" aria-label="Down">▼</button>
+                            <button class="touch-btn" data-dir="right" aria-label="Right">▶</button>
+                        </div>
+                    </div>
+                </div>
+                <p class="hint">Controls: Arrow keys, WASD, or touch buttons below on mobile. This game was generated using Copilot.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Samuel Hartmann. All rights reserved.</p>
+    </footer>
+
+    <script src="./assets/games.js" defer></script>
+</body>
+
+</html>

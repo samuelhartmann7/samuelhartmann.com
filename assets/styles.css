@@ -1,0 +1,31 @@
+/* Minimal styles for layout and game */
+:root{
+  --bg:#0f1724;
+  --card:#0b1220;
+  --accent:#3b82f6;
+  --text:#e6eef8;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;color:var(--text);background:linear-gradient(180deg,#071029 0%, #0f1724 100%);}
+header{display:flex;align-items:center;justify-content:space-between;padding:1rem 2rem;background:transparent}
+.main-nav a{color:var(--text);text-decoration:none;margin-left:1rem;padding:.25rem .5rem;border-radius:6px}
+.main-nav a[aria-current="page"]{background:rgba(255,255,255,0.04)}
+main.games-main{display:flex;gap:1rem;padding:2rem}
+.game-list{width:200px;padding:1rem;background:rgba(255,255,255,0.03);border-radius:8px}
+.game-list h2{margin-top:0}
+.game-list ul{list-style:none;padding:0;margin:0}
+.game-list li{margin-bottom:.5rem}
+.game-btn{width:100%;padding:.5rem;background:transparent;color:var(--text);border:1px solid rgba(255,255,255,0.04);border-radius:6px;cursor:pointer}
+.game-area{flex:1;display:flex;align-items:center;justify-content:center}
+.game-placeholder{padding:2rem;background:rgba(255,255,255,0.02);border-radius:8px}
+.game-ui{width:100%}
+.hidden{display:none}
+.game-frame{position:relative;background:var(--card);padding:1rem;border-radius:8px;display:flex;flex-direction:column;align-items:center}
+.counter{position:absolute;top:8px;right:12px;background:rgba(0,0,0,0.5);padding:6px 10px;border-radius:6px}
+canvas{background:#071426;border-radius:6px;display:block;max-width:100%;height:auto;box-sizing:border-box}
+.touch-controls{display:flex;flex-direction:column;align-items:center;gap:0.3em;margin-top:1em;user-select:none}
+.touch-controls button{background:var(--card);color:var(--text);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:0.7em 1.2em;font-size:1.5em;box-shadow:0 1px 4px #0002;cursor:pointer;outline:none;transition:background 0.15s}
+.touch-controls button:active{background:var(--accent);color:#fff}
+.touch-controls > div{display:flex;gap:0.5em;justify-content:center}
+@media (max-width:600px){.game-frame{padding:0.5rem}.touch-controls button{font-size:1.2em;padding:0.5em 0.8em}}
+@media (max-width:800px){main.games-main{flex-direction:column}.game-list{width:100%}}
